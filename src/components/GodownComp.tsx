@@ -8,6 +8,7 @@ import ItemComp from './ItemComp'
 const GodownComp = ({parent} : {parent : string | null}) => {
 	const items = godownData.filter((ele) => ele.parent_godown == parent);
 	const [isVisible, setVisible] = useState<boolean[]>(new Array(items.length));
+	const [show, currShown] = useState<string>('');
 	const updtVis = (idx : number) => {
 		const currr = [...isVisible];
 		currr[idx] = !isVisible[idx];
@@ -17,7 +18,7 @@ const GodownComp = ({parent} : {parent : string | null}) => {
 	if(items.length == 0){
 		return(
 			<div>
-				<ItemComp godownId={parent!}/>
+				<ItemComp godownId={parent!} setCurr={currShown} curr={show}/>
 			</div>
 		)
 	}else{
