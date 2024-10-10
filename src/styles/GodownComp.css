@@ -1,17 +1,30 @@
 .godown-ele {
-    display: flex;
-    align-items: start;
-    padding: 10px;
     margin-left: 20px;
-    flex-direction: column;
-    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.godown-ele-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #242424;
+    color: #f1f1f1;
     cursor: pointer;
 }
 
-.godown-ele-info{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.godown-ele-info:hover {
+    background-color: #3a3a3a;
+}
+
+.godown-ele-down,
+.godown-ele-up {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.godown-ele-down {
+    transform: rotate(180deg);
 }
 
 .godown-ele-pic {
@@ -19,19 +32,8 @@
     height: 24px;
     margin-right: 10px;
 }
-  
+
 .godown-ele-txt {
     font-size: 16px;
     font-weight: 500;
-}
-
-.godown-ele-down{
-    transform: rotate(180deg);
-    width: 24px;
-    height: 24px;
-}
-
-.godown-ele-up{
-    width: 24px;
-    height: 24px;
 }
