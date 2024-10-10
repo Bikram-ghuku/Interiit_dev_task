@@ -1,8 +1,37 @@
-.godown-ele{
-    padding-left: 20px;
+.godown-ele {
+    display: flex;
+    align-items: start;
+    padding: 10px;
+    margin-left: 20px;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.godown-ele-pic{
-    height: 25px;
-    width: 25px;
+.godown-ele-info{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.godown-ele-pic {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+  
+.godown-ele-txt {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.godown-ele-down{
+    transform: rotate(180deg);
+    width: 24px;
+    height: 24px;
+}
+
+.godown-ele-up{
+    width: 24px;
+    height: 24px;
 }
