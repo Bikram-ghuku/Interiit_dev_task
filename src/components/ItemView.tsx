@@ -10,7 +10,7 @@ function ItemView({itemId, onClose, shown}:{itemId:string, onClose: () => void, 
     }
 
     return (
-        <div className="modal-overlay">
+        <div className="modal-overlay" style={shown ? {display: "flex"} : {display: "none"}}>
             <div className="modal-main" hidden={!shown}>
                 <button className="modal-close" onClick={onClose}>X</button>
                 <h2>Item details</h2>
