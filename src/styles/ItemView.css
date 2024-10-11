@@ -48,7 +48,7 @@ h2 {
 .modal-left {
     flex: 1.5;
     height: 400px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .modal-img {
