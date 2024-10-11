@@ -47,9 +47,8 @@ h2 {
 
 .modal-left {
     flex: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 400px;
+    overflow-y: scroll;
 }
 
 .modal-img {
@@ -106,5 +105,20 @@ h2 {
 @media (max-width: 768px) {
     .modal-details {
         flex-direction: column;
+    }
+
+    .modal-main{
+        width: 80vw;
+    }
+
+    .modal-left {
+        height: auto;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .modal-img {
+        max-height: 100%;
+        height: auto;
     }
 }
