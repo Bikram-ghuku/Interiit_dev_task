@@ -4,15 +4,15 @@ import Login from './pages/Login'
 import Godown from './pages/Godown'
 
 function App() {
-
-  return (
-    <Router>
-      <Routes>
-        <Route path='/' Component={Login}/>
-        <Route path='/godown' Component={Godown} />
-      </Routes>
-    </Router>
-  )
+	const res = localStorage.getItem('login');
+  	return (
+    	<Router>
+    		<Routes>
+        		<Route path='/' Component={Login}/>
+        		{res && <Route path='/godown' Component={Godown} />}
+      		</Routes>
+    	</Router>
+  	)
 }
 
 export default App
