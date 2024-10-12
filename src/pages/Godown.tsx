@@ -22,6 +22,16 @@ function Godown() {
 					matchItems.add(lc.id);
 					lc = godownData.find(ele => ele.id == lc?.parent_godown);
 				}
+
+				const addChild = (id: string) => {
+					const children = godownData.filter(ele => ele.parent_godown == id);
+					for(const child of children){
+						matchItems.add(child.id);
+						addChild(child.id);
+					}
+				}
+
+				addChild(item.id);
 			}
 		}
 
