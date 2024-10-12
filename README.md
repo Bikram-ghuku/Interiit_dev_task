@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Tree godown inventory viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Ideas
+1) Added a login screen to autheticate users and store the data in localstorage.
+2) Added a tree structure. Used a recursive component to build the tree struture. Added dropdown icons.
+3) Added a modal to view the information of the product.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Setup instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Clone the repo
+    git clone https://github.com/Bikram-ghuku/Interiit_dev_task
+    cd Interiit_dev_task
 
-- Configure the top-level `parserOptions` property like this:
+### Run Locally
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1) Install [npm](https://www.npmjs.com/)
+    ```shell
+      npm install -g npm
+    ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2) Install the dependencies
+    ```shell
+      npm i
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3) Run the dev server
+    ```shell
+      npm run dev
+    ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Run using docker
+
+1) Build or pull the docker image
+    ```shell
+      docker build -t bikramghuku05/inter_iit_dev .
+    ```
+
+    **Or**
+
+    ```shell
+      docker pull bikramghuku05/inter_iit_dev
+    ```
+
+2) Run the docker image
+    ```shell
+      docker run -p 3000:80 bikramghuku05/inter_iit_dev
+    ```
+
+## Using the application
+
+1) Login credentials
+
+    Username: user123 \
+    Password: pswd123
