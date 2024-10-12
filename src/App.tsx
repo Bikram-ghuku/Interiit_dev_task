@@ -1,15 +1,16 @@
 import './App.css'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import Godown from './pages/Godown'
 
 function App() {
 	const res = localStorage.getItem('login');
+	console.log(res);
   	return (
     	<Router>
     		<Routes>
         		<Route path='/' Component={Login}/>
-        		{res && <Route path='/godown' Component={Godown} />}
+        		{res == "user123" && <Route path='/godown' Component={Godown} />}
       		</Routes>
     	</Router>
   	)
