@@ -1,0 +1,28 @@
+.godown-main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 25rem;
+    padding-right: 1rem;
+}
+
+.godown-search{
+    height: 20vh;
+    width: calc(100% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 1rem;
+}
+
+.godown-search-inp{
+    height: 2.5rem;
+    line-height: 2rem;
+    width: 100%;
+}
+
+.godown-tree{
+    height: 100%;
+    overflow-y: auto;
+}

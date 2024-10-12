@@ -1,13 +1,13 @@
 import '../styles/GodownComp.css'
 import folderIcon from '../assets/Folder-1.png'
-import { useState } from 'react'
+import {useState} from 'react'
 import chevronDown from '../assets/chevron-down.png'
 import ItemComp from './ItemComp'
 import { goDownType } from '../data/types'
 
 const GodownComp = ({parent, godownData} : {parent : string | null, godownData: goDownType[]}) => {
 	const items = godownData.filter((ele) => ele.parent_godown == parent);
-	const [isVisible, setVisible] = useState<boolean[]>(new Array(items.length));
+	const [isVisible, setVisible] = useState<boolean[]>(new Array(items.length).fill(false));
 	const updtVis = (idx : number) => {
 		const currr = [...isVisible];
 		currr[idx] = !isVisible[idx];
@@ -17,7 +17,12 @@ const GodownComp = ({parent, godownData} : {parent : string | null, godownData: 
 	if(items.length == 0){
 		return(
 			<div>
-				<ItemComp godownId={parent!}/>
+				{parent && <ItemComp godownId={parent!}/>}
+				{!parent && 
+					<span className='godown-ele-info godown-ele-txt'>
+						No result found!!
+					</span>
+				}
 			</div>
 		)
 	}else{
