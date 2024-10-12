@@ -2,10 +2,11 @@ import itemData from '../data/items.json'
 import '../styles/ItemComp.css'
 import obj from '../assets/object.png'
 import ItemView from './ItemView'
-import React from 'react';
+import { useState } from 'react';
 
-function ItemComp({godownId, curr, setCurr} : {godownId : string, curr: string , setCurr: React.Dispatch<string>}) {
+function ItemComp({godownId} : {godownId : string}) {
     const items = itemData.filter((item) => item.godown_id == godownId);
+    const [curr, setCurr] = useState<string>('');
     return (
         <div>
             {items.map((val, idx) => (
