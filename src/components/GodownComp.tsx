@@ -17,7 +17,12 @@ const GodownComp = ({parent, godownData} : {parent : string | null, godownData: 
 	if(items.length == 0){
 		return(
 			<div>
-				<ItemComp godownId={parent!}/>
+				{parent && <ItemComp godownId={parent!}/>}
+				{!parent && 
+					<span className='godown-ele-info godown-ele-txt'>
+						No result found!!
+					</span>
+				}
 			</div>
 		)
 	}else{
