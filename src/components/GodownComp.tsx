@@ -5,7 +5,7 @@ import chevronDown from '../assets/chevron-down.png'
 import ItemComp from './ItemComp'
 import { goDownType } from '../data/types'
 
-const GodownComp = ({parent, godownData, search} : {parent : string | null, godownData: goDownType[], search: string}) => {
+const GodownComp = ({parent, godownData} : {parent : string | null, godownData: goDownType[]}) => {
 	const items = godownData.filter((ele) => ele.parent_godown == parent);
 	const [isVisible, setVisible] = useState<boolean[]>(new Array(items.length).fill(false));
 	const updtVis = (idx : number) => {
@@ -32,7 +32,7 @@ const GodownComp = ({parent, godownData, search} : {parent : string | null, godo
 							<img src={folderIcon} className='godown-ele-pic'/>
 							<span className='godown-ele-txt'>{ele.name}</span>
 						</div>
-						{isVisible[idx] && <GodownComp parent={ele.id} godownData={godownData} search={search}/>}
+						{isVisible[idx] && <GodownComp parent={ele.id} godownData={godownData}/>}
 					</div>
 				))}
 			</div>
