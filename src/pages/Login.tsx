@@ -1,13 +1,10 @@
 import { useState } from "react"
 import "../styles/Login.css"
-import { useNavigate } from "react-router-dom"
 
 
 function Login() {
 	const uname = "user123"
 	const pswd = "pswd123"
-
-	const nav = useNavigate();
 
 	const [unam, setUnam] = useState<string>('');
 	const [psw, setPsw] = useState<string>('');
@@ -15,7 +12,7 @@ function Login() {
 	const submit = () => {
 		if(unam == uname && psw == pswd){
 			localStorage.setItem('login', uname);
-			nav('/godown');
+			document.location.reload();
 		}
 	}
 
