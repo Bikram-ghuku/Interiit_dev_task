@@ -58,3 +58,11 @@
 
     Username: user123 \
     Password: pswd123
+
+## Deployment links
+
+1) [AWS](http://13.201.0.120:3000/)
+
+## Video Demonstration
+
+1) [Drive Video](https://drive.google.com/file/d/1BF5Z7b_MbFUbQBbU9gHzFoH7aKLG6FHO/view?usp=sharing)

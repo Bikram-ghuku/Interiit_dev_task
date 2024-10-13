@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/GodownComp.tsx","./src/components/ItemComp.tsx","./src/components/ItemView.tsx","./src/pages/Godown.tsx","./src/pages/Login.tsx"],"version":"5.6.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/GodownComp.tsx","./src/components/ItemComp.tsx","./src/components/ItemView.tsx","./src/data/types.ts","./src/pages/Godown.tsx","./src/pages/Login.tsx"],"version":"5.6.3"}
