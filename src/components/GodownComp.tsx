@@ -32,12 +32,13 @@ const GodownComp = ({parent, godownData} : {parent : string | null, godownData: 
 				{items.map((ele, idx) => (
 					<div key={parent?.toString() + "_" + idx.toString()} className='godown-ele'>
 						<div className="godown-ele-info" onClick={() => updtVis(idx)}>
-							{isVisible[idx] && <img src={chevronDown} className='godown-ele-down'/>}
-							{!isVisible[idx] && <img src={chevronDown} className='godown-ele-up'/>}
+							<img src={chevronDown} className={isVisible[idx] ? 'godown-ele-down' : 'godown-ele-up'}/>
 							<img src={folderIcon} className='godown-ele-pic'/>
 							<span className='godown-ele-txt'>{ele.name}</span>
 						</div>
-						{isVisible[idx] && <GodownComp parent={ele.id} godownData={godownData}/>}
+						<div className={"godown-child-wrapper " +  (isVisible[idx] ? "expanded" : "")}>
+                            {isVisible[idx] && <GodownComp parent={ele.id} godownData={godownData} />}
+                        </div>
 					</div>
 				))}
 			</div>

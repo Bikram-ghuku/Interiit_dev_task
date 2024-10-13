@@ -21,6 +21,7 @@
     width: 16px;
     height: 16px;
     margin-right: 10px;
+    transition: all 0.5s ease-in-out;
 }
 
 .godown-ele-down {
@@ -36,4 +37,14 @@
 .godown-ele-txt {
     font-size: 16px;
     font-weight: 500;
+}
+
+.godown-child-wrapper {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+}
+
+.expanded {
+    max-height: 500px;
 }
