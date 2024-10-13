@@ -5,6 +5,10 @@
 1) Added a login screen to autheticate users and store the data in localstorage.
 2) Added a tree structure. Used a recursive component to build the tree struture. Added dropdown icons.
 3) Added a modal to view the information of the product.
+4) Search functionality to searh godowns:
+    - Finds a godown via its name.
+    - Adds the parents of the search godown (if exsists).
+    - Adds the children of the search godown(if exsists).
 
 
 ## Setup instructions
